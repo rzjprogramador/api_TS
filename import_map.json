@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@/": "./src/",
+    "@helpers": "./src/__roots__/helpers/index.ts",
+    "@admControll": "./src/entitys/admControll/index.ts",
+    "@admSystem": "./src/__roots__/entitiesSystem/index.ts",
+    "@cliente": "./src/entitys/cliente/index.mod.ts"
+  }
+}

@@ -1,0 +1,2 @@
+# Register Logg
+artefato #registerLoggGeneric : pode ser chamado para registrar logg em qualquer funcionalidade da app - somente precisa passar o [ nomeDaAcao e o set configurado para salvar no repoLogg desejado ]

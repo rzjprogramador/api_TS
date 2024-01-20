@@ -1,0 +1,15 @@
+
+pipe:
+pipe , no acumulador do reduce tipar como any ex: acc: any para evitar erro de compilacao.
+
+---
+
+ERROS:
+
+erro: "ReferenceError: Cannot access before initialization",
+traducao: "ErroDeReferencia: Não é possível acessar antes da inicialização",
+causa: "",
+solucao: "arrumar a ordem ou importacao dos artefatos utilizados para que possam ser enxergados em ordem logica de quem vai usar.",
+tutorial: "https://bobbyhadz.com/blog/javascript-referenceerror-cannot-access-before-initialization#:~:text=The%20%22ReferenceError%3A%20Cannot%20access%20before,the%20variable%20before%20accessing%20it.",
+
+---

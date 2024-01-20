@@ -1,0 +1,9 @@
+// -- CLIENTE FISICO
+// -- by Persistency && Test --
+// const Cliente_MediatorServiceForPersistencyAndTest: IClienteHandleCreateArgsFN = async (args) => {
+//   return await createClienteService(args)
+// }
+
+---
+
+
