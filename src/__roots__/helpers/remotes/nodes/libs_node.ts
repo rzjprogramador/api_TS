@@ -1,5 +1,8 @@
-import * as path from "https://deno.land/std@0.188.0/path/mod.ts";
+import * as path from "@lib_node_path";
 
-export const __dirname: any = path.dirname(path.fromFileUrl(import.meta.url))
+const _dirname: any = path.dirname(path.fromFileUrl(import.meta.url))
 
-export default path
+export {
+  path,
+  _dirname,
+}
