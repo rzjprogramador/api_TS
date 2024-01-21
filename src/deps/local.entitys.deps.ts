@@ -1,1 +1,1 @@
-export { entityOne } from '../entitys/EntityOne/index.ts'
+export { entityOne } from '../domain/entitys/EntityOne/index.ts'
