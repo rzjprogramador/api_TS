@@ -3,10 +3,8 @@
     "@/": "./src/",
     "um": "./src/domain/entitys/1/index.ts",
     "dois": "./src/domain/entitys/2/index.ts",
-
-    "use_libs": "./src/frameworks/remotes.deps.ts",
-
-    "remotes": "https://deno.land/std@0.188.0/path/mod.ts"
+    "lib_std": "./src/frameworks/libs_deps/std_node.ts",
+    "lib_graphql": "./src/frameworks/libs_deps/graphql.deps.ts"
 
   }
 }

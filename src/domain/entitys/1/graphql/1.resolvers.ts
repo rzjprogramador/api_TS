@@ -5,7 +5,7 @@ const respostaUm = {
   logico: true
 }
 
-export default {
+export const umResolver = {
   Query: {
     um: async () => await respostaUm,
   },
