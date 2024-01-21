@@ -1,0 +1,4 @@
+
+type Query {
+  texto2: String
+}

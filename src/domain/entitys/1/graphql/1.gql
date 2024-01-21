@@ -1,0 +1,11 @@
+type Um {
+  # id: ID
+  texto1: String
+  numeroInteiro: Int
+  numeroDecimal: Float
+  logico: Boolean
+}
+
+type Query {
+  um: Um
+}
