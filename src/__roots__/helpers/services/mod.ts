@@ -1,1 +1,0 @@
-export * from './identificator/identificator.serv.ts'

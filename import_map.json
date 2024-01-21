@@ -1,18 +1,7 @@
 {
   "imports": {
     "@/": "./src/",
-    "@helpers": "./src/__roots__/helpers/index.ts",
-    "@admControll": "./src/entitys/admControll/index.ts",
-    "@admSystem": "./src/__roots__/entitiesSystem/index.ts",
-    "@cliente": "./src/entitys/cliente/index.mod.ts",
-    "@lib_id": "/home/rzj/x/_github_rz_/Super_Libs_RZ/Typescript/SuperLibsTS/main.ts",
-    "@lib_date_fields": "/home/rzj/x/_github_rz_/Super_Libs_RZ/Typescript/SuperDateTS/main.ts",
-    "@lib_objectValues": "/home/rzj/x/_github_rz_/Super_Libs_RZ/Typescript/SuperValidades/main.ts",
-    "@lib_validate": "/home/rzj/x/_github_rz_/Super_Libs_RZ/Typescript/SuperValidades/main.ts",
-    "@lib_tsyringe": "npm:@tsyringe@^4.6.0",
-    "@lib_graphql_merge": "npm:@graphql-tools/merge@^8.2.14",
-"@lib_graphql_loadFilesSync": "npm:@graphql-tools/load-files@^7.0.0",
+    "entitys": "./src/deps/local.entitys.deps.ts"
 
-"@lib_node_path": "https://deno.land/std@0.188.0/path/mod.ts"
   }
 }

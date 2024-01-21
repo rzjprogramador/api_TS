@@ -1,0 +1,1 @@
+export { entityOne } from '../entitys/EntityOne/index.ts'
