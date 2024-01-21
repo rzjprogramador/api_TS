@@ -1,0 +1,2 @@
+
+devolve_em_string_o_caminho_do_diretorio_atual: "Deno.cwd(), beneficio: NÃO preciso do path, dirname, join do node e js."

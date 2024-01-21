@@ -1,7 +1,11 @@
 {
   "imports": {
     "@/": "./src/",
-    "entitys": "./src/deps/local.entitys.deps.ts"
+    "entitys": "./src/deps/local.entitys.deps.ts",
+
+    "use_libs": "./src/deps/remote.libs_node.ts",
+
+    "remotes": "https://deno.land/std@0.188.0/path/mod.ts"
 
   }
 }
