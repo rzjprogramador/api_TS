@@ -1,9 +1,0 @@
-type Dinosaur {
-  name: String
-  description: String
-}
-
-type Query {
-  um: [Dinosaur]
-	# dinosaur(name: String): Dinosaur
-}

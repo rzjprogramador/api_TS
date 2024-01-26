@@ -1,6 +1,7 @@
+
 export default {
   Query: {
-    texto2: async () => await "resposta texto2",
+    texto2: async () => await 'resposta texto2',
   },
 };
 

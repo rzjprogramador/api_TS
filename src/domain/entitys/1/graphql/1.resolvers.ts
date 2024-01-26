@@ -1,19 +1,17 @@
-const dinosaurs = [
-  {
-    name: "Aardonyx",
-    description: "An early stage in the evolution of sauropods.",
-  },
-  {
-    name: "Abelisaurus",
-    description: '"Abel\'s lizard" has been reconstructed from a single skull.',
-  },
-];
+const respostaUm = {
+  texto1: 'String 1',
+  numeroInteiro: 10,
+  numeroDecimal: 11.13,
+  logico: true
+}
 
-export const resolversUm = {
+export default {
   Query: {
-    dinosaurs: () => dinosaurs,
-    // dinosaur: (_: any, args: any) => {
-    //   return dinosaurs.find((dinosaur) => dinosaur.name === args.name);
-    // },
+    um: async () => await respostaUm,
   },
 };
+// export const resolverUM = {
+//   Query: {
+//     um: async () => await respostaUm,
+//   },
+// };
