@@ -4,7 +4,7 @@ import { graphql } from "npm:graphql@16.6";
 import * as path from "https://deno.land/std@0.188.0/path/mod.ts";
 import { mergeTypeDefs, mergeResolvers } from "npm:@graphql-tools/merge@^8.2.14";
 import { loadFilesSync } from "npm:@graphql-tools/load-files@^7.0.0";
-import { listResolvers } from "./domain/entitys/list_resolvers/list.resolvers.ts";
+import { listResolvers } from "./domain/list_resolvers/list.resolvers.ts";
 
 
 const __dirname: any = path.dirname(path.fromFileUrl(import.meta.url))
