@@ -6,3 +6,7 @@ export { loadFilesSync } from "npm:@graphql-tools/load-files@^7.0.0";
 export const __dirname: any = path.dirname(path.fromFileUrl(import.meta.url))
 
 export default path
+
+/*
+Obs: essas libs path e dirname tem que estar no emsmo diretorio od server.
+*/
