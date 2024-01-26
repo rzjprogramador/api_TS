@@ -1,5 +1,5 @@
 const respostaUm = {
-  texto1: 'String 1',
+  texto1: 'String 1000',
   numeroInteiro: 10,
   numeroDecimal: 11.13,
   logico: true
@@ -7,7 +7,7 @@ const respostaUm = {
 
 export default {
   Query: {
-    um: async () => await respostaUm,
+    um: () => respostaUm,
   },
 };
 // export const resolverUM = {
