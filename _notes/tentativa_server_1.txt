@@ -1,0 +1,27 @@
+export { graphql } from "npm:graphql@16.6";
+import { ApolloServer } from "npm:@apollo/server@^4.1";
+import { startStandaloneServer } from "npm:@apollo/server@4.1/standalone";
+// export { loadFilesSync } from "npm:@graphql-tools/load-files@^6.5.4";
+import * as path from "https://deno.land/std@0.188.0/path/mod.ts"
+
+const _dirname: any = path.dirname(path.fromFileUrl(import.meta.url))
+
+import { loadFilesSync } from "npm:@graphql-tools/load-files@^7.0.0";
+import { mergeTypeDefs, mergeResolvers } from "npm:@graphql-tools/merge@^9.0.1";
+
+const arrayTypes = loadFilesSync(path.join(_dirname, "../../domain/", "**", "*.gql"))
+const arrayResolvers = loadFilesSync(path.join(_dirname, "../../domain/", "**", "*.js"))
+
+const typeDefs = mergeTypeDefs(arrayTypes)
+const resolvers = mergeResolvers(arrayResolvers)
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+const { url } = await startStandaloneServer(server, {
+  listen: { port: 8000 },
+});
+
+console.log(`Server running on: ${url}`);

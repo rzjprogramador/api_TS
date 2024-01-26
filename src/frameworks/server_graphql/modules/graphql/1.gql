@@ -4,6 +4,6 @@ type Dinosaur {
 }
 
 type Query {
-  dinosaurs: [Dinosaur]
-	dinosaur(name: String): Dinosaur
+  um: [Dinosaur]
+	# dinosaur(name: String): Dinosaur
 }

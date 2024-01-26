@@ -2,9 +2,6 @@
   "imports": {
     "@/": "./src/",
     "um": "./src/domain/entitys/1/index.ts",
-    "dois": "./src/domain/entitys/2/index.ts",
-    "lib_std": "./src/frameworks/libs_deps/std_node.ts",
-    "lib_graphql": "./src/frameworks/libs_deps/graphql.deps.ts"
-
+    "dois": "./src/domain/entitys/2/index.ts"
   }
 }

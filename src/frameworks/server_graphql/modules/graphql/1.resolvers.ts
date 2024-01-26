@@ -9,9 +9,9 @@ const dinosaurs = [
   },
 ];
 
-export const resolversUm = {
+export const boom = {
   Query: {
-    dinosaurs: () => dinosaurs,
+    um: () => dinosaurs,
     // dinosaur: (_: any, args: any) => {
     //   return dinosaurs.find((dinosaur) => dinosaur.name === args.name);
     // },
