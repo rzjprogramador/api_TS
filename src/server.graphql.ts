@@ -10,8 +10,8 @@ import { loadFilesSync } from "npm:@graphql-tools/load-files@^7.0.0";
 // const resolvers = [resolverUM, resolverDOIS];
 
 const __dirname: any = path.dirname(path.fromFileUrl(import.meta.url))
-const typeDefs = mergeTypeDefs(loadFilesSync(path.join(__dirname, "domain/entitys/**/**/*.gql")))
-const resolvers = await mergeResolvers(await loadFilesSync(await path.join(__dirname, "domain/entitys/**/**/*.js")))
+const typeDefs = mergeTypeDefs(loadFilesSync(path.join(__dirname, "domain/entitys/**/**/"), { extensions: ['gql'] }))
+const resolvers = await mergeResolvers(await loadFilesSync(await path.join(__dirname, "/src/domain/entitys/**/**/"), { extensions: ['ts'] }))
 
 
 
