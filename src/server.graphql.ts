@@ -16,8 +16,9 @@ const server = new ApolloServer({
   resolvers: listResolvers,
 });
 
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 8000 },
-});
-
-console.log(`Server running on: ${url}`);
+export const runServerGRAPHQL = async () => {
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 8000 },
+  });
+  console.log(`Server running on: ${url}`);
+}
