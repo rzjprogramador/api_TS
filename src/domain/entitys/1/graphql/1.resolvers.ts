@@ -1,17 +1,8 @@
-const respostaUm = {
-  texto1: 'String 10',
-  numeroInteiro: 10,
-  numeroDecimal: 11.13,
-  logico: true
-}
+import { entity_1 } from "./../module.ts";
+
 
 export default {
   Query: {
-    um: () => respostaUm,
+    texto: async () => await entity_1(),
   },
 };
-// export const resolverUM = {
-//   Query: {
-//     um: async () => await respostaUm,
-//   },
-// };

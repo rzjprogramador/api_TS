@@ -1,0 +1,2 @@
+Se for devolver um tipo primitivo nao precisa resolver com os parametros do resolver funcao
+Se for devolver um objeto resolva com a funcao de aprametros resolver

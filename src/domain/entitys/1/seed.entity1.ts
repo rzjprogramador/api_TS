@@ -1,0 +1,1 @@
+export const requestCreateEntity1 = 'Sou um texto 1'
