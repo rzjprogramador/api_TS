@@ -1,5 +1,5 @@
 
-export class Adm {
+class Adm {
 
   constructor(
     public readonly lengthTextNomeClienteFisico: number = 2,
