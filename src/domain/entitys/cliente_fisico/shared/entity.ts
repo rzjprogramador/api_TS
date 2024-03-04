@@ -1,4 +1,5 @@
 import type { ArgsClienteFisico, ComputedClienteFisico } from "@clienteFisico";
+import { NomeClienteFisico, SobrenomeClienteFisico } from "@objectValues";
 
 export class EntityClienteFisico {
   constructor(
@@ -10,8 +11,8 @@ export class EntityClienteFisico {
     const instanceByArgs = await new EntityClienteFisico(args)
 
     const validArgs = {
-      nome: instanceByArgs.args.nome,
-      sobrenome: instanceByArgs.args.sobrenome,
+      nome: await NomeClienteFisico(instanceByArgs.args.nome),
+      sobrenome: await SobrenomeClienteFisico(instanceByArgs.args.sobrenome),
     }
 
     const computed: ComputedClienteFisico = {

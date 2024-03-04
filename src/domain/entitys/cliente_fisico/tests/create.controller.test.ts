@@ -25,3 +25,24 @@ Deno.test({
   },
 
 });
+
+Deno.test({
+  name: "[ FAIL ] deve recusar criar a instancia de clienteFisico com nome inferior a 2 letras.",
+  only: false,
+  async fn() {
+
+    const catchMsg = async () => {
+      const requestFail = { ...argsCreateClienteFisicoSEED, nome: "F" }
+
+      try {
+        return await CreateClienteFisicoController.execute(requestFail)
+      }
+      catch (err: any) {
+        return err.message
+      }
+    }
+
+    expect(await catchMsg()).toBe("Ops... as letras não podem ser menor que 2");
+  },
+
+});
