@@ -1,6 +1,7 @@
 {
   "imports": {
     "@/": "./src/",
+    "@clienteFisico": "./src/domain/entitys/cliente_fisico/shared/exports.ts",
     "um": "./src/domain/entitys/1/index.ts",
     "dois": "./src/domain/entitys/2/index.ts"
   }
