@@ -1,5 +1,5 @@
 export * from "./types.ts"
-export * from "./entity.ts"
+export * from "./entity.valid.ts"
 export * from "./../usecases/create/service.ts"
 export * from "./../usecases/create/controller.ts"
 export * from "./seed.args.create.ts"
