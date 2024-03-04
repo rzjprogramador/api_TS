@@ -1,4 +1,4 @@
-import { ArgsClienteFisico } from "@clienteFisico";
+import type { ArgsClienteFisico, ComputedClienteFisico } from "@clienteFisico";
 
 export class EntityClienteFisico {
   constructor(
@@ -6,7 +6,21 @@ export class EntityClienteFisico {
   ) { }
 
   static async create(args: ArgsClienteFisico) {
-    return await new EntityClienteFisico(args)
+
+    const instanceByArgs = await new EntityClienteFisico(args)
+
+    const validArgs = {
+      nome: instanceByArgs.args.nome,
+      sobrenome: instanceByArgs.args.sobrenome,
+    }
+
+    const computed: ComputedClienteFisico = {
+      nomeCompleto: await instanceByArgs.nomeCompleto(),
+    }
+
+    const created = await { args: validArgs, computed }
+
+    return created
   }
 
   async nomeCompleto() {
