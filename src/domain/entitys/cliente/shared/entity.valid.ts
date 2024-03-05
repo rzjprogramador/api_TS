@@ -1,26 +1,21 @@
-import type { ArgsClienteFisico, ComputedClienteFisico } from "@clienteFisico";
+import type { ArgsClienteFisico, ComputedClienteFisico } from "./exports.ts";
 import { NomeClienteFisico, SobrenomeClienteFisico } from "@objectValues";
 
-export class EntityClienteFisico {
+export class Cliente {
   constructor(
     public readonly args: ArgsClienteFisico,
   ) { }
 
-  static async create(args: ArgsClienteFisico) {
-
-    const instanceByArgs = await new EntityClienteFisico(args)
-
+  static async createArgsClienteFisico(args: ArgsClienteFisico) {
+    const instanceByArgs = await new Cliente(args)
     const validArgs = {
       nome: await NomeClienteFisico(instanceByArgs.args.nome),
       sobrenome: await SobrenomeClienteFisico(instanceByArgs.args.sobrenome),
     }
-
     const computed: ComputedClienteFisico = {
       nomeCompleto: await instanceByArgs.nomeCompleto(),
     }
-
     const created = await { args: validArgs, computed }
-
     return created
   }
 

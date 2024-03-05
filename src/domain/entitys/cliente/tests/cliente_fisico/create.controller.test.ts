@@ -1,7 +1,7 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { CreateClienteFisicoController, argsCreateClienteFisicoSEED } from "@clienteFisico"
+import { CreateClienteController, argsCreateClienteFisicoSEED } from "../../shared/exports.ts"
 
-const sutController = await CreateClienteFisicoController.execute(argsCreateClienteFisicoSEED)
+const sutController = await CreateClienteController.executeClienteFisico(argsCreateClienteFisicoSEED)
 const sut = sutController
 console.log("INSTANCIA_SUT GERADA >> ", sut)
 
@@ -35,7 +35,7 @@ Deno.test({
       const requestFail = { ...argsCreateClienteFisicoSEED, nome: "F" }
 
       try {
-        return await CreateClienteFisicoController.execute(requestFail)
+        return await CreateClienteController.executeClienteFisico(requestFail)
       }
       catch (err: any) {
         return err.message

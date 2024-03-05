@@ -1,12 +1,11 @@
+import { AdmClienteFisico } from "@adm"
 
-class Adm {
-
+export class Adm {
   constructor(
-    public readonly lengthTextNomeClienteFisico: number = 2,
-    public readonly lengthTextSobrenomeClienteFisico: number = 2,
-  ) {
-    this.lengthTextNomeClienteFisico = lengthTextNomeClienteFisico
+    public readonly admClienteFisico: any = new AdmClienteFisico,
+  ) { }
+
+  static gerarAdmClienteFisico() {
+    return new Adm()
   }
 }
-
-export const adm = new Adm
