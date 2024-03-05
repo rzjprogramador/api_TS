@@ -1,4 +1,4 @@
-import type { ArgsClienteFisico, ComputedClienteFisico } from "./exports.ts";
+import type { ArgsClienteFisico, ComputedClienteFisico } from "@cliente";
 import { NomeClienteFisico, SobrenomeClienteFisico } from "@objectValues";
 
 export class Cliente {

@@ -1,4 +1,4 @@
-import { AdmClienteFisico } from "@adm"
+import { AdmClienteFisico } from "./index.ts"
 
 export class Adm {
   constructor(

@@ -1,11 +1,9 @@
 {
   "imports": {
     "@/": "./src/",
-    "@adm": "./src/helpers/adm/index.ts",
-    "@clienteFisico": "./src/domain/entitys/cliente_fisico/shared/exports.ts",
-    "@libs": "./src/helpers/imports/libs.ts",
-    "@objectValues": "./src/helpers/objectValues/index.ts",
-    "um": "./src/domain/entitys/1/index.ts",
-    "dois": "./src/domain/entitys/2/index.ts"
+    "@adm": "./src/domain/helpers/adm/index.ts",
+    "@cliente": "./src/domain/entitys/cliente/shared/exports.ts",
+    "@libs": "./src/domain/helpers/libs/index.ts",
+    "@objectValues": "./src/domain/helpers/objectValues/index.ts"
   }
 }

@@ -1,4 +1,4 @@
-import { ArgsClienteFisico } from "./exports.ts";
+import { ArgsClienteFisico } from "@cliente";
 
 export const argsCreateClienteFisicoSEED: ArgsClienteFisico = {
   nome: "ClienteUm",

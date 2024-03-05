@@ -1,12 +1,13 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
-import { CreateClienteController, argsCreateClienteFisicoSEED } from "../../shared/exports.ts"
+
+import { CreateClienteController, argsCreateClienteFisicoSEED } from "@cliente"
 
 const sutController = await CreateClienteController.executeClienteFisico(argsCreateClienteFisicoSEED)
 const sut = sutController
-console.log("INSTANCIA_SUT GERADA >> ", sut)
+console.log("INSTANCIA_SUT GERADA CLIENTE FISICO >> ", sut)
 
 Deno.test({
-  name: "[ OK ] deve criar Cliente.",
+  name: "[ ClienteFisico ] deve criar Cliente.",
   only: false,
   async fn() {
     // console.log(sutInstance)
@@ -17,7 +18,7 @@ Deno.test({
 });
 
 Deno.test({
-  name: "[ OK ] deve computar de forma assincrona o nomeCompleto como prop da instancia.",
+  name: "[ ClienteFisico ] deve computar de forma assincrona o nomeCompleto como prop da instancia.",
   only: false,
   async fn() {
     // console.log(created.nomeCompleto())
@@ -27,7 +28,7 @@ Deno.test({
 });
 
 Deno.test({
-  name: "[ FAIL ] deve recusar criar a instancia de clienteFisico com nome inferior a 2 letras.",
+  name: "[ ClienteFisico ] deve recusar criar a instancia de clienteFisico com nome inferior a 2 letras.",
   only: false,
   async fn() {
 

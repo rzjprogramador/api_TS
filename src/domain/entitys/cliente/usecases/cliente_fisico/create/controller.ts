@@ -1,5 +1,4 @@
-import { CreateCliente, ArgsClienteFisico } from "../../../shared/exports.ts";
-
+import { CreateCliente, ArgsClienteFisico } from "@cliente";
 
 export class CreateClienteController {
 
