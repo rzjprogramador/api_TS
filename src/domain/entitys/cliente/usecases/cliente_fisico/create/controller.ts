@@ -2,10 +2,12 @@ import { CreateCliente, ArgsClienteFisico } from "@cliente";
 
 export class CreateClienteController {
 
-  static async executeClienteFisico(data: ArgsClienteFisico) {
-    const createdService = await CreateCliente.performClienteFisico(data)
-    const created = await createdService
-    return created
+  static async handle(data: ArgsClienteFisico) {
+    try {
+      return await CreateCliente.performClienteFisico(data)
+    } catch (error) {
+      return error
+    }
   }
 
 }

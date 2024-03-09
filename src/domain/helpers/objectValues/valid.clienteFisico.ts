@@ -1,16 +1,12 @@
-import { Adm } from "@adm"
-import { MinString } from "@libs"
+import { AdmController } from "@adm"
+import { ValidateText } from "@external"
 
 // insira nas funcoes as sub funcoes para validar o campo desejado com objectValue.
 
-const adm = Adm.gerarAdmClienteFisico().admClienteFisico
-
 export const NomeClienteFisico = async (data: string) => {
-  const minText = await MinString(data, adm.lenghtNome)
-  return minText
+  return await ValidateText(data, new AdmController().admClienteFisico.nome)
 }
 
 export const SobrenomeClienteFisico = async (data: string) => {
-  const minText = await MinString(data, adm.lenghtSobrenome)
-  return minText
+  return await ValidateText(data, new AdmController().admClienteFisico.sobrenome)
 }

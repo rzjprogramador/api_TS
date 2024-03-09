@@ -1,5 +1,5 @@
 import type { ArgsClienteFisico, ComputedClienteFisico } from "@cliente";
-import { NomeClienteFisico, SobrenomeClienteFisico } from "@objectValues";
+import { NomeClienteFisico, SobrenomeClienteFisico } from "@helpers";
 
 export class Cliente {
   constructor(
@@ -17,6 +17,7 @@ export class Cliente {
     }
     const created = await { args: validArgs, computed }
     return created
+
   }
 
   async nomeCompleto() {

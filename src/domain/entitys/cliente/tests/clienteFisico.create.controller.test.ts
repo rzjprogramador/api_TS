@@ -1,8 +1,9 @@
 import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 
 import { CreateClienteController, argsCreateClienteFisicoSEED } from "@cliente"
+import { AdmController, setClienteFisico } from "@adm";
 
-const sutController = await CreateClienteController.executeClienteFisico(argsCreateClienteFisicoSEED)
+const sutController = await CreateClienteController.handle(argsCreateClienteFisicoSEED)
 const sut = sutController
 console.log("INSTANCIA_SUT GERADA CLIENTE FISICO >> ", sut)
 
@@ -28,22 +29,16 @@ Deno.test({
 });
 
 Deno.test({
-  name: "[ ClienteFisico ] deve recusar criar a instancia de clienteFisico com nome inferior a 2 letras.",
+  name: "[ ClienteFisico - validacao campo nome ] deve recusar criar a instancia de clienteFisico com nome inferior a 2 letras.",
   only: false,
   async fn() {
-
     const catchMsg = async () => {
-      const requestFail = { ...argsCreateClienteFisicoSEED, nome: "F" }
-
-      try {
-        return await CreateClienteController.executeClienteFisico(requestFail)
-      }
-      catch (err: any) {
-        return err.message
-      }
+      const requestFail = { nome: "u", sobrenome: "SobrenomeUM" }
+      return await CreateClienteController.handle(requestFail)
     }
-
-    expect(await catchMsg()).toBe("Ops... as letras não podem ser menor que 2");
+    // console.log('RESULTADO >>', await catchMsg())
+    expect(await catchMsg()).toEqual(`${setClienteFisico.messageError} ${new AdmController().admClienteFisico.nome.text}`)
   },
 
 });
+

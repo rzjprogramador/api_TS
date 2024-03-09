@@ -1,9 +1,10 @@
 {
   "imports": {
     "@/": "./src/",
-    "@adm": "./src/domain/helpers/adm/index.ts",
+    "@helpers": "./src/domain/helpers/index.ts",
+    "@external": "./src/external/index.ts",
+    "@adm": "./src/domain/adm/index.ts",
     "@cliente": "./src/domain/entitys/cliente/shared/exports.ts",
-    "@libs": "./src/domain/helpers/libs/index.ts",
     "@objectValues": "./src/domain/helpers/objectValues/index.ts"
   }
 }
