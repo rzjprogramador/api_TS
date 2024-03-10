@@ -6,12 +6,7 @@ export const nomeClienteFisico: TypeValidateScalar<string> = {
   rule: '',
   messageError: Feedback.minText,
 }
-export const sobrenomeClienteFisico: TypeValidateScalar<string> = {
-  text: 3,
-  number: 0,
-  rule: '',
-  messageError: Feedback.minText,
-}
+export const sobrenomeClienteFisico: TypeValidateScalar<string> = nomeClienteFisico
 
 export class AdmClienteFisico {
   constructor(

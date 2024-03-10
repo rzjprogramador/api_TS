@@ -1,0 +1,18 @@
+// backup : funcao validador de nome e sobrenome - sem o pipe reduce
+export const NomeClienteFisico2 = async (data: string) => {
+  try {
+    return await ValidateText(data, new AdmController().admClienteFisico.nome)
+  } catch (error) {
+    throw error
+  }
+}
+
+export const SobrenomeClienteFisico = async (data: string) => {
+  try {
+    return await ValidateText(data, new AdmController().admClienteFisico.sobrenome)
+  } catch (error) {
+    throw error
+  }
+}
+
+---

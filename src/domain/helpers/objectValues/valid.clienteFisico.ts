@@ -1,19 +1,27 @@
 import { AdmController } from "@adm"
 import { ValidateText } from "@external"
 
-// insira nas funcoes as sub funcoes para validar o campo desejado com objectValue.
+// add no array as funcoes para validar a propriedade
+const listNomeClienteFisico = [ValidateText,]
 
-export const NomeClienteFisico = async (data: string) => {
+export const NomeClienteFisico = async (target: any, listFn: Function[] = listNomeClienteFisico) => {
   try {
-    return await ValidateText(data, new AdmController().admClienteFisico.nome)
+    return await listFn.reduce((acc: any, atfn: Function) => {
+      return atfn(acc, new AdmController().admClienteFisico.nome)
+    }, target)
   } catch (error) {
     throw error
   }
 }
 
-export const SobrenomeClienteFisico = async (data: string) => {
+// add no array as funcoes para validar a propriedade
+const listSobrenomeClienteFisico = [ValidateText,]
+
+export const SobrenomeClienteFisico = async (target: any, listFn: Function[] = listSobrenomeClienteFisico) => {
   try {
-    return await ValidateText(data, new AdmController().admClienteFisico.sobrenome)
+    return await listFn.reduce((acc: any, atfn: Function) => {
+      return atfn(acc, new AdmController().admClienteFisico.sobrenome)
+    }, target)
   } catch (error) {
     throw error
   }

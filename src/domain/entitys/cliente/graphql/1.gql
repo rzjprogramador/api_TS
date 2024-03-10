@@ -1,0 +1,7 @@
+type Um {
+  texto: String
+}
+
+type Query {
+  texto: Um
+}
