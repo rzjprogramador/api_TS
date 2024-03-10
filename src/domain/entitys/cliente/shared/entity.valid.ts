@@ -1,5 +1,4 @@
-import type { ArgsClienteFisico, ComputedClienteFisico } from "@cliente";
-import { NomeClienteFisico, SobrenomeClienteFisico } from "@helpers";
+import { ArgsClienteFisico, ComputedClienteFisico, NomeClienteFisico, SobrenomeClienteFisico } from "@cliente";
 
 export class Cliente {
   constructor(

@@ -1,7 +1,6 @@
 {
   "imports": {
     "@/": "./src/",
-    "@helpers": "./src/domain/helpers/index.ts",
     "@external": "./src/external/index.ts",
     "@adm": "./src/domain/adm/index.ts",
     "@cliente": "./src/domain/entitys/cliente/shared/exports.ts",
