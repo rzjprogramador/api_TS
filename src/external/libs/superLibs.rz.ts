@@ -7,6 +7,8 @@ export {
   type Response,
 } from "/home/rzj/x/_github_rz_/Super_Libs_RZ/TsResponse/response.ts"
 
+export { usePipeValidateAsync as usePipeValidateAsync } from "/home/rzj/x/_github_rz_/Super_Libs_RZ/SuperValidades/pipes/async_validate/pipe.ts"
+
 export { Feedback } from "/home/rzj/x/_github_rz_/Super_Libs_RZ/Feedbacks/feedbacks.ts"
 
 export type {
