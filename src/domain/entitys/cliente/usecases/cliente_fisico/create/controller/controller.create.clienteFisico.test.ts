@@ -3,7 +3,7 @@ import { expect } from "https://deno.land/x/expect@v0.2.10/expect.ts";
 import { CreateClienteController, argsCreateClienteFisicoSEED } from "@cliente"
 import { AdmController, nomeClienteFisico } from "@adm";
 
-const sutController = await CreateClienteController.handle(argsCreateClienteFisicoSEED)
+const sutController = await CreateClienteController.perform(argsCreateClienteFisicoSEED)
 const sut = sutController
 console.log("INSTANCIA_SUT GERADA CLIENTE FISICO >> ", sut)
 
@@ -34,7 +34,7 @@ Deno.test({
   async fn() {
     const catchMsg = async () => {
       const requestFail = { nome: "le", sobrenome: "SobrenomeUM" }
-      return await CreateClienteController.handle(requestFail)
+      return await CreateClienteController.perform(requestFail)
     }
 
     const res = await catchMsg()
@@ -54,7 +54,7 @@ Deno.test({
   async fn() {
     const catchMsg = async () => {
       const requestFail = { nome: "any", sobrenome: "ss" }
-      return await CreateClienteController.handle(requestFail)
+      return await CreateClienteController.perform(requestFail)
     }
 
     const res = await catchMsg()

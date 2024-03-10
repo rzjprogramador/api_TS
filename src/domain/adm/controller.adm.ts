@@ -5,4 +5,8 @@ export class AdmController {
     public readonly admClienteFisico = new AdmClienteFisico(),
   ) { }
 
+  static createAdmClienteFisico() {
+    return new AdmController()
+  }
+
 }
