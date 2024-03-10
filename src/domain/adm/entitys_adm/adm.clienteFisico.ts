@@ -1,16 +1,22 @@
-import { TypeValidateScalar } from "../../../external/index.ts"
+import { TypeValidateScalar, Feedback } from "@external"
 
-export const setClienteFisico: TypeValidateScalar<string> = {
-  text: 2,
+export const nomeClienteFisico: TypeValidateScalar<string> = {
+  text: 3,
   number: 0,
   rule: '',
-  messageError: "Ops... nao pode texto menor que",
+  messageError: Feedback.minText,
+}
+export const sobrenomeClienteFisico: TypeValidateScalar<string> = {
+  text: 3,
+  number: 0,
+  rule: '',
+  messageError: Feedback.minText,
 }
 
 export class AdmClienteFisico {
   constructor(
-    public readonly nome: TypeValidateScalar<string> = setClienteFisico,
-    public readonly sobrenome: TypeValidateScalar<string> = setClienteFisico,
+    public readonly nome: TypeValidateScalar<string> = nomeClienteFisico,
+    public readonly sobrenome: TypeValidateScalar<string> = sobrenomeClienteFisico,
   ) { }
 
 }

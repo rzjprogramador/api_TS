@@ -4,9 +4,17 @@ import { ValidateText } from "@external"
 // insira nas funcoes as sub funcoes para validar o campo desejado com objectValue.
 
 export const NomeClienteFisico = async (data: string) => {
-  return await ValidateText(data, new AdmController().admClienteFisico.nome)
+  try {
+    return await ValidateText(data, new AdmController().admClienteFisico.nome)
+  } catch (error) {
+    throw error
+  }
 }
 
 export const SobrenomeClienteFisico = async (data: string) => {
-  return await ValidateText(data, new AdmController().admClienteFisico.sobrenome)
+  try {
+    return await ValidateText(data, new AdmController().admClienteFisico.sobrenome)
+  } catch (error) {
+    throw error
+  }
 }
